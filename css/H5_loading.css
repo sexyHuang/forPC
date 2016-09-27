@@ -1,0 +1,54 @@
+/*loading动画样式*/
+
+
+.loading {
+    //display: none;
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    background-color:black;
+}
+
+.double-bounce1,.double-bounce2 {
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #0062e0;
+    position: absolute;
+    margin: auto;
+    left: 0;right: 0;top: 0;bottom: 0;
+    opacity: 0.6;
+    -webkit-opacity: 0.6;
+
+}
+.double-bounce1 {
+    -webkit-animation: bounce 2s infinite  ease-in-out;
+}
+.double-bounce2 {
+    -webkit-animation: bounce2 2s infinite  ease-in-out;
+}
+.loading #rate {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: calc(50% + 120px);
+    color: #0062e0;
+}
+
+@-webkit-keyframes bounce  {
+    0%,100%{
+        transform: scale(0);
+    }
+
+    50%{ transform: scale(1)}
+}
+@-webkit-keyframes bounce2  {
+    0%,100%{
+        transform: scale(1);
+    }
+
+    50%{ transform: scale(0)}
+}
